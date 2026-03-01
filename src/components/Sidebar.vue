@@ -19,7 +19,7 @@ const handleLogout = () => {
 
 <template>
   <aside class="w-64 bg-gray-800 text-white min-h-screen hidden lg:block">
-    <div class="p-6">
+    <div class="p-6 h-full flex flex-col">
       <div class="flex items-center space-x-3 mb-8">
         <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
           <span class="text-lg font-bold">{{ authStore.user?.name?.[0] || 'A' }}</span>
@@ -30,7 +30,7 @@ const handleLogout = () => {
         </div>
       </div>
 
-      <nav class="space-y-2">
+      <nav class="space-y-2 flex-1">
         <router-link
           v-for="item in menuItems"
           :key="item.path"
@@ -56,7 +56,7 @@ const handleLogout = () => {
         </router-link>
       </nav>
 
-      <div class="absolute bottom-6 left-6 right-6">
+      <div class="mt-auto pt-6">
         <button @click="handleLogout"
           class="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-red-600 hover:bg-red-700 rounded-lg transition-colors">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
