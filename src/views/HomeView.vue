@@ -30,25 +30,25 @@ const features = [
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white">
+    <section class="bg-gradient-to-br from-pink-400 via-pink-500 to-pink-500 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div class="text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             Quản lý sản phẩm
             <span class="block text-yellow-300">thông minh & hiệu quả</span>
           </h1>
-          <p class="text-xl md:text-2xl text-indigo-100 mb-10 max-w-3xl mx-auto">
+          <p class="text-xl md:text-2xl text-pink-100 mb-10 max-w-3xl mx-auto">
             Ứng dụng PWA hiện đại giúp bạn quản lý sản phẩm mọi lúc, mọi nơi -
             kể cả khi không có internet.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <router-link
               :to="authStore.isAuthenticated ? '/dashboard' : '/login'"
-              class="px-8 py-4 bg-white text-indigo-600 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+              class="px-8 py-4 bg-white text-pink-500 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
               {{ authStore.isAuthenticated ? 'Vào Dashboard' : 'Bắt đầu ngay' }}
             </router-link>
             <a href="#features"
-              class="px-8 py-4 border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all">
+              class="px-8 py-4 border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white hover:text-pink-500 transition-all">
               Tìm hiểu thêm
             </a>
           </div>
@@ -80,8 +80,8 @@ const features = [
             class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
             <!-- Mobile Icon -->
             <div v-if="feature.icon === 'mobile'"
-              class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
-              <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-7 h-7 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
               </svg>
@@ -118,17 +118,17 @@ const features = [
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-indigo-600 py-16">
+    <section class="bg-pink-500 py-16">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
           Sẵn sàng bắt đầu?
         </h2>
-        <p class="text-xl text-indigo-100 mb-8">
+        <p class="text-xl text-pink-100 mb-8">
           Đăng nhập ngay để trải nghiệm hệ thống quản lý sản phẩm hiện đại
         </p>
         <router-link
           :to="authStore.isAuthenticated ? '/dashboard' : '/login'"
-          class="inline-block px-8 py-4 bg-white text-indigo-600 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+          class="inline-block px-8 py-4 bg-white text-pink-500 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
           {{ authStore.isAuthenticated ? 'Vào Dashboard' : 'Đăng nhập' }}
         </router-link>
       </div>
@@ -138,7 +138,7 @@ const features = [
     <footer class="bg-gray-900 text-gray-400 py-12">
       <div class="max-w-7xl mx-auto px-4 text-center">
         <div class="flex items-center justify-center space-x-2 mb-4">
-          <svg class="w-8 h-8 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
           </svg>

@@ -1,8 +1,36 @@
 @import "tailwindcss";
 
+/* Color Theme Variables */
+:root {
+  --primary-color: #FFD9E1;
+  --secondary-color: #FFB6C1;
+  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+  --spacing-unit: 8px;
+  --accent-color: #FF69B4;
+  --text-dark: #333;
+  --text-light: #666;
+  --white: #ffffff;
+  --black: #000000;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Tailwind Theme */
+@theme {
+  --color-primary: #FFD9E1;
+  --color-primary-light: #FFF0F3;
+  --color-primary-dark: #FF69B4;
+  --color-secondary: #FFB6C1;
+  --color-accent: #FF69B4;
+  --color-accent-hover: #FF1493;
+}
+
 /* Custom styles */
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 /* Custom scrollbar */

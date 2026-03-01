@@ -14,8 +14,8 @@ export default defineConfig({
         name: 'Shinzo Kijo - Quản Lý Sản Phẩm',
         short_name: 'Shinzo Kijo',
         description: 'Ứng dụng quản lý sản phẩm hiện đại',
-        theme_color: '#4F46E5',
-        background_color: '#ffffff',
+        theme_color: '#FF69B4',
+        background_color: '#FFF0F3',
         display: 'standalone',
         start_url: '/',
         icons: [

@@ -44,10 +44,10 @@ const handleAddToCart = (product) => {
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- Hero Banner -->
-    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12">
+    <div class="bg-gradient-to-r from-pink-400 to-purple-600 text-white py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-3xl md:text-4xl font-bold mb-4">Cửa hàng trực tuyến</h1>
-        <p class="text-indigo-100 text-lg">Khám phá các sản phẩm chất lượng cao</p>
+        <p class="text-pink-100 text-lg">Khám phá các sản phẩm chất lượng cao</p>
       </div>
     </div>
 
@@ -62,11 +62,11 @@ const handleAddToCart = (product) => {
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
             <input v-model="searchQuery" type="text" placeholder="Tìm kiếm sản phẩm..."
-              class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
+              class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent" />
           </div>
           <!-- Category Filter -->
           <select v-model="selectedCategory"
-            class="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent bg-white">
+            class="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent bg-white">
             <option value="">Tất cả danh mục</option>
             <option v-for="category in productStore.categories" :key="category" :value="category">
               {{ category }}
@@ -98,7 +98,7 @@ const handleAddToCart = (product) => {
             <p class="text-gray-500 text-sm mb-4 line-clamp-2">{{ product.description }}</p>
 
             <div class="flex items-center justify-between">
-              <span class="text-xl font-bold text-indigo-600">{{ formatCurrency(product.price) }}</span>
+              <span class="text-xl font-bold text-pink-500">{{ formatCurrency(product.price) }}</span>
 
               <button
                 v-if="authStore.isAuthenticated"
@@ -110,7 +110,7 @@ const handleAddToCart = (product) => {
                     ? 'bg-green-500 text-white'
                     : product.stock === 0
                       ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                      : 'bg-indigo-600 text-white hover:bg-indigo-700'
+                      : 'bg-pink-500 text-white hover:bg-pink-600'
                 ]">
                 <svg v-if="addedProducts.has(product.id)" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -123,7 +123,7 @@ const handleAddToCart = (product) => {
               </button>
 
               <router-link v-else to="/login"
-                class="flex items-center space-x-2 px-4 py-2 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 transition-all">
+                class="flex items-center space-x-2 px-4 py-2 bg-pink-500 text-white rounded-xl font-medium hover:bg-pink-600 transition-all">
                 <span>Đăng nhập</span>
               </router-link>
             </div>

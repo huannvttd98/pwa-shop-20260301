@@ -18,7 +18,7 @@ const stats = [
     getValue: () => productStore.totalProducts,
     icon: 'box',
     color: 'indigo',
-    bgColor: 'bg-indigo-500'
+    bgColor: 'bg-pink-400'
   },
   {
     title: 'Tồn kho',
@@ -50,7 +50,7 @@ const stats = [
     <div class="mb-8">
       <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Dashboard</h1>
       <p class="text-gray-500 mt-1">
-        Xin chào, <span class="font-medium text-indigo-600">{{ authStore.user?.name || 'Admin' }}</span>!
+        Xin chào, <span class="font-medium text-pink-500">{{ authStore.user?.name || 'Admin' }}</span>!
         Đây là tổng quan hệ thống.
       </p>
     </div>
@@ -97,7 +97,7 @@ const stats = [
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-xl font-bold text-gray-900">Sản phẩm gần đây</h2>
         <router-link to="/products"
-          class="text-indigo-600 hover:text-indigo-800 font-medium text-sm">
+          class="text-pink-500 hover:text-pink-700 font-medium text-sm">
           Xem tất cả →
         </router-link>
       </div>

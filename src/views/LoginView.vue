@@ -44,11 +44,11 @@ const handleLogin = async () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
+  <div class="min-h-screen bg-gradient-to-br from-pink-400 via-purple-500 to-pink-500 flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8">
       <!-- Logo & Title -->
       <div class="text-center mb-8">
-        <div class="w-16 h-16 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <div class="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
           <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -59,16 +59,16 @@ const handleLogin = async () => {
       </div>
 
       <!-- Demo credentials -->
-      <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-4 mb-6">
-        <p class="text-sm text-indigo-800 font-medium mb-3">🔐 Tài khoản demo:</p>
+      <div class="bg-pink-50 border border-pink-200 rounded-xl p-4 mb-6">
+        <p class="text-sm text-pink-700 font-medium mb-3">🔐 Tài khoản demo:</p>
         <div class="space-y-2">
           <div class="bg-white rounded-lg p-2">
             <p class="text-xs text-gray-500 font-medium">👨‍💼 Admin</p>
-            <p class="text-sm text-indigo-600">admin@example.com / 123456</p>
+            <p class="text-sm text-pink-500">admin@example.com / 123456</p>
           </div>
           <div class="bg-white rounded-lg p-2">
             <p class="text-xs text-gray-500 font-medium">🛒 Khách hàng</p>
-            <p class="text-sm text-indigo-600">customer@example.com / 123456</p>
+            <p class="text-sm text-pink-500">customer@example.com / 123456</p>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ const handleLogin = async () => {
               v-model="email"
               type="email"
               placeholder="your@email.com"
-              class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+              class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all"
             />
           </div>
         </div>
@@ -119,7 +119,7 @@ const handleLogin = async () => {
               v-model="password"
               :type="showPassword ? 'text' : 'password'"
               placeholder="••••••••"
-              class="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+              class="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-transparent transition-all"
             />
             <button type="button" @click="showPassword = !showPassword"
               class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600">
@@ -141,7 +141,7 @@ const handleLogin = async () => {
         <button
           type="submit"
           :disabled="isLoading"
-          class="w-full py-3 px-4 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+          class="w-full py-3 px-4 bg-pink-500 text-white font-medium rounded-xl hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
         >
           <span v-if="isLoading" class="flex items-center justify-center">
             <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
@@ -156,7 +156,7 @@ const handleLogin = async () => {
 
       <!-- Back to home -->
       <div class="mt-6 text-center">
-        <router-link to="/" class="text-indigo-600 hover:text-indigo-800 font-medium">
+        <router-link to="/" class="text-pink-500 hover:text-pink-700 font-medium">
           ← Quay về trang chủ
         </router-link>
       </div>

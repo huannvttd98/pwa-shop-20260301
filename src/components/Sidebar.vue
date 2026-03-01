@@ -21,7 +21,7 @@ const handleLogout = () => {
   <aside class="w-64 bg-gray-800 text-white min-h-screen hidden lg:block">
     <div class="p-6">
       <div class="flex items-center space-x-3 mb-8">
-        <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center">
+        <div class="w-10 h-10 bg-pink-400 rounded-full flex items-center justify-center">
           <span class="text-lg font-bold">{{ authStore.user?.name?.[0] || 'A' }}</span>
         </div>
         <div>
@@ -38,7 +38,7 @@ const handleLogout = () => {
           :class="[
             'flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors',
             route.path === item.path
-              ? 'bg-indigo-600 text-white'
+              ? 'bg-pink-500 text-white'
               : 'text-gray-300 hover:bg-gray-700'
           ]"
         >
