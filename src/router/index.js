@@ -18,12 +18,24 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('@/views/DashboardView.vue'),
-    meta: { requiresAuth: true }
+    meta: { requiresAuth: true, adminOnly: true }
   },
   {
     path: '/products',
     name: 'Products',
     component: () => import('@/views/ProductsView.vue'),
+    meta: { requiresAuth: true, adminOnly: true }
+  },
+  {
+    path: '/shop',
+    name: 'Shop',
+    component: () => import('@/views/ShopView.vue'),
+    meta: { requiresAuth: false }
+  },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: () => import('@/views/CartView.vue'),
     meta: { requiresAuth: true }
   }
 ]
@@ -38,8 +50,12 @@ router.beforeEach((to, from, next) => {
 
   if (to.meta.requiresAuth && !authStore.isAuthenticated) {
     next({ name: 'Login' })
+  } else if (to.meta.adminOnly && (!authStore.isAuthenticated || authStore.user?.role !== 'admin')) {
+    // Redirect non-admin users to shop
+    next({ name: 'Shop' })
   } else if (to.meta.hideForAuth && authStore.isAuthenticated) {
-    next({ name: 'Dashboard' })
+    // Redirect based on role after login
+    next({ name: authStore.user?.role === 'admin' ? 'Dashboard' : 'Shop' })
   } else {
     next()
   }

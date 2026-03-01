@@ -26,7 +26,12 @@ const handleLogin = async () => {
     const result = await authStore.login(email.value, password.value)
 
     if (result.success) {
-      router.push('/dashboard')
+      // Redirect based on role
+      if (result.role === 'admin') {
+        router.push('/dashboard')
+      } else {
+        router.push('/shop')
+      }
     } else {
       error.value = result.message
     }
@@ -55,9 +60,17 @@ const handleLogin = async () => {
 
       <!-- Demo credentials -->
       <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-4 mb-6">
-        <p class="text-sm text-indigo-800 font-medium mb-2">🔐 Tài khoản demo:</p>
-        <p class="text-sm text-indigo-600">Email: <code class="bg-indigo-100 px-2 py-1 rounded">admin@example.com</code></p>
-        <p class="text-sm text-indigo-600">Mật khẩu: <code class="bg-indigo-100 px-2 py-1 rounded">123456</code></p>
+        <p class="text-sm text-indigo-800 font-medium mb-3">🔐 Tài khoản demo:</p>
+        <div class="space-y-2">
+          <div class="bg-white rounded-lg p-2">
+            <p class="text-xs text-gray-500 font-medium">👨‍💼 Admin</p>
+            <p class="text-sm text-indigo-600">admin@example.com / 123456</p>
+          </div>
+          <div class="bg-white rounded-lg p-2">
+            <p class="text-xs text-gray-500 font-medium">🛒 Khách hàng</p>
+            <p class="text-sm text-indigo-600">customer@example.com / 123456</p>
+          </div>
+        </div>
       </div>
 
       <!-- Error message -->
