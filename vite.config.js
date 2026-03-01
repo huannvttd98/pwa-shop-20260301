@@ -11,8 +11,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'PWA Shop - Quản Lý Sản Phẩm',
-        short_name: 'PWA Shop',
+        name: 'Shinzo Kijo - Quản Lý Sản Phẩm',
+        short_name: 'Shinzo Kijo',
         description: 'Ứng dụng quản lý sản phẩm hiện đại',
         theme_color: '#4F46E5',
         background_color: '#ffffff',

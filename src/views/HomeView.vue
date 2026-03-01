@@ -142,9 +142,9 @@ const features = [
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
           </svg>
-          <span class="text-white font-bold text-xl">PWA Shop</span>
+          <span class="text-white font-bold text-xl">Shinzo Kijo</span>
         </div>
-        <p>&copy; 2026 PWA Shop. Được xây dựng với Vue 3 + Vite + Tailwind CSS</p>
+        <p>&copy; 2026 Shinzo Kijo. Được xây dựng với Vue 3 + Vite + Tailwind CSS</p>
       </div>
     </footer>
   </div>
