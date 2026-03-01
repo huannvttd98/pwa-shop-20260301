@@ -21,7 +21,7 @@ const toggleMobileMenu = () => {
 </script>
 
 <template>
-  <nav class="bg-pink-500 text-white shadow-lg">
+  <nav class="bg-rose-400 text-white shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -38,12 +38,12 @@ const toggleMobileMenu = () => {
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-4">
           <router-link to="/"
-            class="px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+            class="px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
             Trang chủ
           </router-link>
 
           <router-link to="/shop"
-            class="px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+            class="px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
             Cửa hàng
           </router-link>
 
@@ -51,18 +51,18 @@ const toggleMobileMenu = () => {
             <!-- Admin Menu -->
             <template v-if="authStore.isAdmin">
               <router-link to="/dashboard"
-                class="px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+                class="px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
                 Dashboard
               </router-link>
               <router-link to="/products"
-                class="px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+                class="px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
                 Quản lý SP
               </router-link>
             </template>
 
             <!-- Customer Menu -->
             <template v-if="authStore.isCustomer">
-              <router-link to="/cart" class="relative px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+              <router-link to="/cart" class="relative px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -75,9 +75,9 @@ const toggleMobileMenu = () => {
             </template>
 
             <div class="flex items-center space-x-3">
-              <span class="text-pink-200 text-sm">{{ authStore.user?.name }}</span>
+              <span class="text-rose-200 text-sm">{{ authStore.user?.name }}</span>
               <button @click="handleLogout"
-                class="px-4 py-2 bg-white text-pink-500 rounded-md font-medium hover:bg-gray-100 transition-colors">
+                class="px-4 py-2 bg-white text-rose-500 rounded-md font-medium hover:bg-gray-100 transition-colors">
                 Đăng xuất
               </button>
             </div>
@@ -85,7 +85,7 @@ const toggleMobileMenu = () => {
 
           <template v-else>
             <router-link to="/login"
-              class="px-4 py-2 bg-white text-pink-500 rounded-md font-medium hover:bg-gray-100 transition-colors">
+              class="px-4 py-2 bg-white text-rose-500 rounded-md font-medium hover:bg-gray-100 transition-colors">
               Đăng nhập
             </router-link>
           </template>
@@ -94,7 +94,7 @@ const toggleMobileMenu = () => {
         <!-- Mobile menu button -->
         <div class="md:hidden">
           <button @click="toggleMobileMenu"
-            class="p-2 rounded-md hover:bg-pink-400 transition-colors">
+            class="p-2 rounded-md hover:bg-rose-300 transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path v-if="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -107,15 +107,15 @@ const toggleMobileMenu = () => {
     </div>
 
     <!-- Mobile Menu -->
-    <div v-show="isMobileMenuOpen" class="md:hidden bg-pink-600">
+    <div v-show="isMobileMenuOpen" class="md:hidden bg-rose-500">
       <div class="px-4 py-3 space-y-2">
         <router-link to="/" @click="isMobileMenuOpen = false"
-          class="block px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+          class="block px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
           Trang chủ
         </router-link>
 
         <router-link to="/shop" @click="isMobileMenuOpen = false"
-          class="block px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+          class="block px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
           Cửa hàng
         </router-link>
 
@@ -123,11 +123,11 @@ const toggleMobileMenu = () => {
           <!-- Admin Menu -->
           <template v-if="authStore.isAdmin">
             <router-link to="/dashboard" @click="isMobileMenuOpen = false"
-              class="block px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+              class="block px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
               Dashboard
             </router-link>
             <router-link to="/products" @click="isMobileMenuOpen = false"
-              class="block px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+              class="block px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
               Quản lý sản phẩm
             </router-link>
           </template>
@@ -135,7 +135,7 @@ const toggleMobileMenu = () => {
           <!-- Customer Menu -->
           <template v-if="authStore.isCustomer">
             <router-link to="/cart" @click="isMobileMenuOpen = false"
-              class="flex items-center px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+              class="flex items-center px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
               <span>Giỏ hàng</span>
               <span v-if="cartStore.totalItems > 0"
                 class="ml-2 px-2 py-0.5 bg-red-500 text-white text-xs rounded-full">
@@ -144,10 +144,10 @@ const toggleMobileMenu = () => {
             </router-link>
           </template>
 
-          <div class="border-t border-pink-400 pt-2 mt-2">
-            <p class="px-3 py-1 text-pink-200 text-sm">{{ authStore.user?.name }}</p>
+          <div class="border-t border-rose-300 pt-2 mt-2">
+            <p class="px-3 py-1 text-rose-200 text-sm">{{ authStore.user?.name }}</p>
             <button @click="handleLogout"
-              class="w-full text-left px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+              class="w-full text-left px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
               Đăng xuất
             </button>
           </div>
@@ -155,7 +155,7 @@ const toggleMobileMenu = () => {
 
         <template v-else>
           <router-link to="/login" @click="isMobileMenuOpen = false"
-            class="block px-3 py-2 rounded-md hover:bg-pink-400 transition-colors">
+            class="block px-3 py-2 rounded-md hover:bg-rose-300 transition-colors">
             Đăng nhập
           </router-link>
         </template>

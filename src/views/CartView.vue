@@ -57,7 +57,7 @@ const closeSuccessModal = () => {
               <!-- Product Info -->
               <div class="flex-1 ml-4 md:ml-6">
                 <h3 class="font-bold text-gray-900 text-lg">{{ item.name }}</h3>
-                <p class="text-pink-500 font-medium mt-1">{{ formatCurrency(item.price) }}</p>
+                <p class="text-rose-500 font-medium mt-1">{{ formatCurrency(item.price) }}</p>
               </div>
 
               <!-- Quantity Controls -->
@@ -91,7 +91,7 @@ const closeSuccessModal = () => {
           <!-- Continue Shopping -->
           <div class="mt-6">
             <router-link to="/shop"
-              class="inline-flex items-center text-pink-500 hover:text-pink-700 font-medium">
+              class="inline-flex items-center text-rose-500 hover:text-rose-600 font-medium">
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
@@ -117,13 +117,13 @@ const closeSuccessModal = () => {
               <div class="border-t pt-4">
                 <div class="flex justify-between text-lg font-bold text-gray-900">
                   <span>Tổng cộng</span>
-                  <span class="text-pink-500">{{ formatCurrency(cartStore.totalPrice) }}</span>
+                  <span class="text-rose-500">{{ formatCurrency(cartStore.totalPrice) }}</span>
                 </div>
               </div>
             </div>
 
             <button @click="handleCheckout"
-              class="w-full mt-6 py-4 bg-pink-500 text-white rounded-xl font-bold text-lg hover:bg-pink-600 transition-colors">
+              class="w-full mt-6 py-4 bg-rose-400 text-white rounded-xl font-bold text-lg hover:bg-rose-500 transition-colors">
               Đặt hàng
             </button>
 
@@ -145,7 +145,7 @@ const closeSuccessModal = () => {
         <h2 class="text-2xl font-bold text-gray-900 mb-2">Giỏ hàng trống</h2>
         <p class="text-gray-500 mb-8">Bạn chưa có sản phẩm nào trong giỏ hàng</p>
         <router-link to="/shop"
-          class="inline-flex items-center px-6 py-3 bg-pink-500 text-white rounded-xl font-medium hover:bg-pink-600 transition-colors">
+          class="inline-flex items-center px-6 py-3 bg-rose-400 text-white rounded-xl font-medium hover:bg-rose-500 transition-colors">
           <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -171,7 +171,7 @@ const closeSuccessModal = () => {
           Đơn hàng của bạn đã được ghi nhận. Chúng tôi sẽ liên hệ sớm nhất.
         </p>
         <router-link to="/shop" @click="closeSuccessModal"
-          class="inline-block px-6 py-3 bg-pink-500 text-white rounded-xl font-medium hover:bg-pink-600 transition-colors">
+          class="inline-block px-6 py-3 bg-rose-400 text-white rounded-xl font-medium hover:bg-rose-500 transition-colors">
           Tiếp tục mua sắm
         </router-link>
       </div>
@@ -196,7 +196,7 @@ const closeSuccessModal = () => {
 
           <div class="flex justify-between text-lg font-bold pt-2">
             <span>Tổng cộng:</span>
-            <span class="text-pink-500">{{ formatCurrency(cartStore.totalPrice) }}</span>
+            <span class="text-rose-500">{{ formatCurrency(cartStore.totalPrice) }}</span>
           </div>
         </div>
 
@@ -206,7 +206,7 @@ const closeSuccessModal = () => {
             Hủy
           </button>
           <button @click="confirmOrder"
-            class="flex-1 py-3 px-4 bg-pink-500 text-white rounded-xl hover:bg-pink-600 transition-colors font-medium">
+            class="flex-1 py-3 px-4 bg-rose-400 text-white rounded-xl hover:bg-rose-500 transition-colors font-medium">
             Xác nhận đặt hàng
           </button>
         </div>

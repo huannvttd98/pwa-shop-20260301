@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
-/* Color Theme Variables */
+/* Color Theme Variables - Soft Rose Palette */
 :root {
-  --primary-color: #FFD9E1;
-  --secondary-color: #FFB6C1;
+  --primary-color: #FECDD3;
+  --secondary-color: #FDA4AF;
   --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-size-base: 16px;
   --line-height-base: 1.5;
   --spacing-unit: 8px;
-  --accent-color: #FF69B4;
-  --text-dark: #333;
-  --text-light: #666;
+  --accent-color: #F472B6;
+  --text-dark: #374151;
+  --text-light: #6B7280;
   --white: #ffffff;
   --black: #000000;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Custom Tailwind Theme */
+/* Custom Tailwind Theme - Soft Rose */
 @theme {
-  --color-primary: #FFD9E1;
-  --color-primary-light: #FFF0F3;
-  --color-primary-dark: #FF69B4;
-  --color-secondary: #FFB6C1;
-  --color-accent: #FF69B4;
-  --color-accent-hover: #FF1493;
+  --color-primary: #FECDD3;
+  --color-primary-light: #FFF1F2;
+  --color-primary-dark: #FB7185;
+  --color-secondary: #FDA4AF;
+  --color-accent: #F472B6;
+  --color-accent-hover: #EC4899;
 }
 
 /* Custom styles */
