@@ -5,48 +5,48 @@ export const useProductStore = defineStore('product', () => {
   const products = ref([
     {
       id: 1,
-      name: 'iPhone 15 Pro Max',
-      price: 34990000,
-      category: 'Điện thoại',
+      name: 'Shinzo Kijo - Hộp 30 gói',
+      price: 1290000,
+      category: 'Sản phẩm chính',
       stock: 50,
-      image: 'https://placehold.co/200x200/4F46E5/white?text=iPhone',
-      description: 'Điện thoại cao cấp của Apple'
+      image: '/images/products/s_n_xu_t_1_1_480x480.png',
+      description: 'Hộp 30 gói tiện dụng cho 1 tháng sử dụng'
     },
     {
       id: 2,
-      name: 'MacBook Air M3',
-      price: 27990000,
-      category: 'Laptop',
+      name: 'Shinzo Kijo - Combo 2 hộp',
+      price: 2380000,
+      category: 'Combo',
       stock: 30,
-      image: 'https://placehold.co/200x200/059669/white?text=MacBook',
-      description: 'Laptop mỏng nhẹ với chip M3'
+      image: '/images/products/1.png',
+      description: 'Combo tiết kiệm 2 hộp cho 2 tháng'
     },
     {
       id: 3,
-      name: 'AirPods Pro 2',
-      price: 6490000,
-      category: 'Phụ kiện',
+      name: 'Shinzo Kijo - Combo 3 hộp',
+      price: 3470000,
+      category: 'Combo',
       stock: 100,
-      image: 'https://placehold.co/200x200/DC2626/white?text=AirPods',
-      description: 'Tai nghe không dây cao cấp'
+      image: '/images/products/2.png',
+      description: 'Combo tiết kiệm 3 hộp cho 3 tháng'
     },
     {
       id: 4,
-      name: 'iPad Pro 12.9"',
-      price: 28990000,
-      category: 'Máy tính bảng',
+      name: 'Shinzo Kijo - Combo 5 hộp',
+      price: 5450000,
+      category: 'Combo gia đình',
       stock: 25,
-      image: 'https://placehold.co/200x200/7C3AED/white?text=iPad',
-      description: 'Máy tính bảng chuyên nghiệp'
+      image: '/images/products/3.png',
+      description: 'Combo gia đình, tiết kiệm tối đa'
     },
     {
       id: 5,
-      name: 'Apple Watch Ultra 2',
-      price: 21990000,
-      category: 'Đồng hồ',
-      stock: 40,
-      image: 'https://placehold.co/200x200/EA580C/white?text=Watch',
-      description: 'Đồng hồ thông minh cao cấp'
+      name: 'Shinzo Kijo - Gói dùng thử',
+      price: 150000,
+      category: 'Dùng thử',
+      stock: 200,
+      image: '/images/products/4.png',
+      description: 'Gói dùng thử 3 ngày'
     }
   ])
 
